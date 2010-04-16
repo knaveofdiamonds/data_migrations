@@ -25,7 +25,7 @@ do with migrations.
 
 == Versions
 
-This plugin is for Rails 2.3.5 - it almost certainly doesn't use 
+This plugin is for Rails 2.3.5 - it almost certainly doesn't work on Rails 3.
 
 == Note on Patches/Pull Requests
  
