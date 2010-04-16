@@ -1,0 +1,42 @@
+= data_migrations
+
+A rails plugin to allow you to isolate data fixes & transforms from schema changes.
+
+== Why?
+
+Migrations should be runnable from a fresh project checkout and a blank database. The
+problem with migrations that change data is that they are often dependant on the state
+of the codebase at the time they are run.
+
+The data_migrations plugin creates a separate folder +db/data_migrations+ to store these
+data fixes and a data_migrations table comparable to schema_info. It reuses most of the
+standard Rails migration functionality, so you can do pretty much anything with them you can
+do with migrations.
+
+== Usage
+
+    script/plugin install git://github.com/knaveofdiamonds/data_migrations.git
+
+    script/generate data_migration my_migration
+
+    edit db/data_migrations/timestamp_my_migration.rb just like a normal migration
+
+    rake db:data_migrations:apply
+
+== Versions
+
+This plugin is for Rails 2.3.5 - it almost certainly doesn't use 
+
+== Note on Patches/Pull Requests
+ 
+* Fork the project.
+* Make your feature addition or bug fix.
+* Add tests for it. This is important so I don't break it in a
+  future version unintentionally.
+* Commit, do not mess with rakefile, version, or history.
+  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
+* Send me a pull request. Bonus points for topic branches.
+
+== Copyright
+
+Copyright (c) 2010 Notonthehighstreet Enterprises Ltd. See LICENSE for details.
